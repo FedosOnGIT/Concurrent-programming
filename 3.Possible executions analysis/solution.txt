@@ -1,0 +1,60 @@
+Надуткин Федор # <-- fill it in
+# Each line is: <state1> -> <state2>
+# Each <state> is: [Px,Qy,a,b]
+# todo: write the rest of transitions
+
+# from Level 1 to Level 2
+[P1,Q1,0,0] -> [P2,Q1,1,0]
+[P1,Q1,0,0] -> [P1,Q2,0,1]
+
+# from Level 2 to Level 3
+[P2,Q1,1,0] -> [P3,Q1,1,0]
+[P2,Q1,1,0] -> [P2,Q2,1,1]
+[P1,Q2,0,1] -> [P2,Q2,1,1]
+[P1,Q2,0,1] -> [P1,Q4,0,1]
+
+# from Level 3 to Level 3
+[P2,Q2,1,1] -> [P2,Q2,1,1]
+
+# from Level 3 to Level 4
+[P3,Q1,1,0] -> [P4,Q1,1,0]
+[P3,Q1,1,0] -> [P3,Q2,1,1]
+[P2,Q2,1,1] -> [P2,Q3,1,1]
+[P1,Q4,0,1] -> [P2,Q4,1,1]
+
+# from Level 4 to Level 1
+[P4,Q1,1,0] -> [P1,Q1,0,0]
+
+# from Level 4 to Level 2
+[P2,Q3,1,1] -> [P2,Q1,1,0]
+
+# from Level 4 to Level 4
+[P2,Q3,1,1] -> [P2,Q3,1,1]
+[P2,Q4,1,1] -> [P2,Q4,1,1]
+
+# from Level 4 to Level 5
+[P4,Q1,1,0] -> [P4,Q2,1,1]
+[P3,Q2,1,1] -> [P4,Q2,1,1]
+[P3,Q2,1,1] -> [P3,Q3,1,1]
+
+# from Level 5 to Level 2
+[P4,Q2,1,1] -> [P1,Q2,0,1]
+
+# from Level 5 to Level 3
+[P3,Q3,1,1] -> [P3,Q1,1,0]
+
+# from Level 5 to Level 6
+[P4,Q2,1,1] -> [P4,Q3,1,1]
+[P3,Q3,1,1] -> [P4,Q3,1,1]
+
+# from Level 6 to Level 4
+[P4,Q3,1,1] -> [P4,Q1,1,0]
+
+# from Level 6 to Level 7
+[P4,Q3,1,1] -> [P1,Q3,0,1]
+
+# from Level 7 to Level 1
+[P1,Q3,0,1] -> [P1,Q1,0,0]
+
+# from Level 7 to Level 4
+[P1,Q3,0,1] -> [P2,Q3,1,1]
